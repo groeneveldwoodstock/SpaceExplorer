@@ -13,6 +13,7 @@ How to Play...
 <ul>
   <li>Swipe left and right to avoid alien ships.</li>
   <li>Swipe left and right to collect ammo boxes, lives, and green worlds.</li>
+ <li>Swipe up to fire a missle and destroy alien ships.</li>
 </ul>
 <h3>
 The object is to collect as many worlds as possible while avoiding, or destroying enemy ships!
