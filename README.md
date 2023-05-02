@@ -1,4 +1,4 @@
-# SpaceExplorer
+# World Collector
  Swift Arcade Game with Swipes
  
  </h3>
