@@ -3,17 +3,20 @@
  
  </h3>
 <p float="left">
-<img src="https://github.com/groeneveldwoodstock/Pope-Computer-Science/blob/main/PopeCSPhone2.png" alt="Screen Shot" style="width:200px;">
+<img src="https://github.com/groeneveldwoodstock/SpaceExplorer/blob/main/screenshot1.png" alt="Screen Shot" style="width:200px;">
 
-<img src="https://github.com/groeneveldwoodstock/Pope-Computer-Science/blob/main/PopeCSPhone.png" alt="Screen Shot" style="width:200px;">
+<img src="https://github.com/groeneveldwoodstock/SpaceExplorer/blob/main/screenshot2.png" alt="Screen Shot" style="width:200px;">
 </p>
 <h3>
 How to Play... 
 </h3>
 <ul>
-  <li>Students can use this app to check class calendars.</li>
-  <li>Descriptions of Pope Computer Science Classes</li>
+  <li>Swipe left and right to avoid alien ships.</li>
+  <li>Swipe left and right to collect ammo boxes, lives, and green worlds.</li>
 </ul>
+<h3>
+The object is to collect as many worlds as possible while avoiding, or destroying enemy ships!
+</h3>
 <hr>
 <h3>
 This app was created to teach and learn. All code used in creating the app is available on GitHub.
