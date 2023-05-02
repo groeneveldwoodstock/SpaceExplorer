@@ -1,0 +1,62 @@
+//
+//  HomeViewController.swift
+//  Space Explorer
+//
+
+
+import UIKit
+
+class HomeViewController: UIViewController {
+    @IBOutlet weak var newGameButton: UIButton!
+    @IBOutlet weak var coinsLabel: UILabel!
+    @IBOutlet weak var coinsIcon: UIImageView!
+    @IBOutlet weak var highScoreLabel: UILabel!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setUpButtons()
+
+        let color1 = UIColor(red: 124.0/255.0, green:77.0/255.0, blue: 255.0/255.0, alpha: 1.0)
+        let color2 = UIColor(red: 63.0/255.0, green: 29.0/255.0, blue: 203.0/255.0, alpha: 1.0)
+
+        view.setGradientBackground(colorOne: color1, colorTwo: color2)
+
+        let coins = UserDefaults.standard.integer(forKey: "coins")
+        let highscore = UserDefaults.standard.integer(forKey: "high")
+        coinsLabel.text = "\(coins)"
+        highScoreLabel.text = "High Score: " + String(highscore)
+        coinsLabel.layer.zPosition = 100
+        coinsIcon.layer.zPosition = 100
+    }
+
+    func setUpButtons() {
+        let brightOrange = UIColor(red: 255.0/255.0, green: 69.0/255.0, blue: 0.0/255.0, alpha: 1.0)
+        let orange = UIColor(red: 255.0/255.0, green: 175.0/255.0, blue: 72.0/255.0, alpha: 1.0)
+
+        newGameButton.layer.cornerRadius = newGameButton.frame.size.height / 2
+        newGameButton.layer.masksToBounds = true
+        newGameButton.setGradientBackground(colorOne: orange, colorTwo: brightOrange)
+        newGameButton.layer.zPosition = 100
+
+    }
+
+    @IBAction func startGame(_ sender: Any) {
+        let gameVC = self.storyboard?.instantiateViewController(withIdentifier: "GameVC") as! GameViewController
+        self.present(gameVC, animated: true, completion: nil)
+    }
+}
+
+extension UIView {
+
+    func setGradientBackground(colorOne: UIColor, colorTwo: UIColor) {
+
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = bounds
+        gradientLayer.colors = [colorOne.cgColor, colorTwo.cgColor]
+        gradientLayer.locations = [0.0, 1.0]
+        gradientLayer.startPoint = CGPoint(x: 1.0, y: 1.0)
+        gradientLayer.endPoint = CGPoint(x: 0.0, y: 0.0)
+
+        layer.insertSublayer(gradientLayer, at: 0)
+    }
+}
