@@ -1,4 +1,4 @@
-# World Collector
+# Collect Worlds
  Swift Arcade Game with Swipes
  
  </h3>
